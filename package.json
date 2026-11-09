@@ -1,0 +1,29 @@
+{
+  "name": "@alcorexchange/wallet-plugin-alcor-signer",
+  "version": "0.1.0",
+  "description": "Alcor Signer wallet plugin for WharfKit Session Kit: a passkey wallet for WAX, Telos, XPR Network and Vaulta",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js"
+    }
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p .",
+    "prepublishOnly": "yarn build",
+    "test": "yarn build && node --test 'tests/*.test.mjs'"
+  },
+  "peerDependencies": {
+    "@wharfkit/session": "^1.6.0"
+  },
+  "devDependencies": {
+    "@wharfkit/session": "1.6.1",
+    "typescript": "5.9.3"
+  }
+}

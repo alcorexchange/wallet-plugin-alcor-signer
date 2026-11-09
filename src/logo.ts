@@ -1,0 +1,4 @@
+// alcor-signer/public/signer-mark.svg
+const SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 330" fill="none"><g stroke="#b4bbb8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"><polygon points="113 317 3 210 113 3 223 210 113 317"/><polyline points="3 210 113 178 223 210"/><polyline points="76 74 113 317 151 74 76 74"/></g><circle cx="232" cy="258" r="66" fill="#111313"/><path d="M208 252v-16a24 24 0 0 1 48 0v16" stroke="#34d399" stroke-width="12" stroke-linecap="round"/><rect x="192" y="248" width="80" height="60" rx="12" fill="#34d399"/><rect x="227" y="266" width="10" height="22" rx="5" fill="#111313"/></svg> `
+
+export const LOGO = `data:image/svg+xml,${encodeURIComponent(SVG)}`
