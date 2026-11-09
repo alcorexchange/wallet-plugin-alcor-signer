@@ -7,6 +7,9 @@ export const SIGNER_ORIGINS = {
 
 export type SignerOrigin = (typeof SIGNER_ORIGINS)[keyof typeof SIGNER_ORIGINS]
 
+/** PARTNER_PROTOCOL in alcor-signer/public/protocol.js; the Signer refuses any other. */
+const PROTOCOL_VERSION = 1
+
 /** The window loads ~900 KB of modules; on mobile data that can take well over 10 s. */
 const HANDSHAKE_MS = 60_000
 /** Only for `sign`: login may create a passkey and show 24 words, which honestly takes longer. */
@@ -90,7 +93,7 @@ export function talk<T>(popup: Window, origin: SignerOrigin, payload: Record<str
         sent = true
         clearTimeout(handshake)
         try {
-          popup.postMessage({ type: 'vault:request', reqId, ...payload }, origin)
+          popup.postMessage({ type: 'vault:request', reqId, version: PROTOCOL_VERSION, ...payload }, origin)
         } catch (error) {
           // DataCloneError: a Proxy or a function in the actions.
           fail(`Could not send the request to Alcor Signer: ${(error as Error).message}`)

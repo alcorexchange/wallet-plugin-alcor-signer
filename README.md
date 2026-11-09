@@ -41,4 +41,4 @@ Login and signing open a window on `sign.alcor.exchange`. The person picks the a
 yarn test
 ```
 
-`new WalletPluginAlcorSigner({ signerOrigin: SIGNER_ORIGINS.development })` talks to a local Signer on `https://sign.localhost:8443`. The local Signer answers only `https://localhost:3000`, `https://127.0.0.1:3000` and `https://[::1]:3000`.
+`new WalletPluginAlcorSigner({ signerOrigin: SIGNER_ORIGINS.development })` talks to a local Signer on `https://sign.localhost:8443`. Serve your app on `https://localhost:4000`: that is the one partner origin the local Signer answers.
