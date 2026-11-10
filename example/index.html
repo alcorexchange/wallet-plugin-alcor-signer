@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alcor Signer plugin test</title>
+    <style>
+      body { font: 15px/1.5 system-ui, sans-serif; max-width: 560px; margin: 40px auto; padding: 0 16px; }
+      button { font: inherit; padding: 8px 14px; margin: 0 8px 8px 0; }
+      pre { background: #f3f3f3; padding: 12px; white-space: pre-wrap; word-break: break-all; }
+    </style>
+  </head>
+  <body>
+    <h1>Alcor Signer plugin test</h1>
+    <p>Partner page on WAX. The dev Signer must be running on https://sign.localhost:8443.</p>
+    <button id="login">Log in</button>
+    <button id="transfer" disabled>Send 0.00000001 WAX to myself</button>
+    <button id="logout" disabled>Log out</button>
+    <pre id="log">Not logged in</pre>
+    <script type="module" src="./dist/main.js"></script>
+  </body>
+</html>
