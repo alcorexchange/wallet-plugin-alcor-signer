@@ -45,14 +45,15 @@ $('transfer').onclick = async () => {
     const result = await session.transact({
       action: {
         account: 'eosio.token',
-        name: 'transfer',
+        // An existing balance row makes this a no-op: no tokens move, no RAM is used.
+        name: 'open',
         authorization: [session.permissionLevel],
-        data: { from: session.actor, to: session.actor, quantity: '0.00000001 WAX', memo: 'alcor signer plugin test' },
+        data: { owner: session.actor, symbol: '8,WAX', ram_payer: session.actor },
       },
     })
     show(`Sent: ${result.response?.transaction_id ?? '(no id)'}`)
   } catch (error) {
-    show(`Transfer failed: ${(error as Error).message}`)
+    show(`Signing failed: ${(error as Error).message}`)
   }
 }
 
