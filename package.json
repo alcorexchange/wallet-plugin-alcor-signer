@@ -2,6 +2,13 @@
   "name": "@alcorexchange/wallet-plugin-alcor-signer",
   "version": "0.1.0",
   "description": "Alcor Signer wallet plugin for WharfKit Session Kit: a passkey wallet for WAX, Telos, XPR Network and Vaulta",
+  "homepage": "https://github.com/alcorexchange/wallet-plugin-alcor-signer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alcorexchange/wallet-plugin-alcor-signer.git"
+  },
+  "bugs": "https://github.com/alcorexchange/wallet-plugin-alcor-signer/issues",
+  "keywords": ["wharfkit", "wallet-plugin", "antelope", "wax", "passkey", "alcor"],
   "type": "module",
   "exports": {
     ".": {
